@@ -1,2 +1,5 @@
 #.env
+# สร้างไฟล์ .env ขึ้นมาใหม่ เเละ ใส่ค่า PORT=3000
+
 node_modules/
+# ใช้ npm install
