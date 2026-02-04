@@ -18,7 +18,7 @@ const Book = sequelize.define('book', {
 // create the books table if it doesn't exist
 sequelize.sync();
 
-app.get('/', (req, res) => {
+app.get("/", (req, res) => {
     res.send("Hello, Books World!");
 });
 
