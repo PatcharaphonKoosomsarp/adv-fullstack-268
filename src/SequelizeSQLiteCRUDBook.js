@@ -14,7 +14,7 @@ app.use(express.json());
 const sequelize = new Sequelize('database', 'username', 'password', {
   host: 'localhost',
   dialect: 'sqlite',
-  storage: './Database/SQBooks.sqlite'
+  storage: './Database/Books.sqlite'
 });
 // define the Book model
 const Book = sequelize.define('book', {
@@ -31,6 +31,10 @@ const Book = sequelize.define('book', {
     type: Sequelize.STRING,
     allowNull: false
   }
+});
+
+app.get('/', (req, res) => {
+    res.send('Welcome to the SequelizeSQLiteCRUDBook');
 });
 
 // create the books table if it doesn't exist
