@@ -11,13 +11,13 @@ const app = express();
 //const base_url = "https://api.example.com";
 const base_url = "http://localhost:3000";
 
-// Serve static files
+// Set the template engine and views directory
 app.set('views', path.join(__dirname, '/public/views'));
 app.set("view engine", "ejs");
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-
+// Serve static files
 app.use(express.static(path.join(__dirname, 'public')));
 
 
