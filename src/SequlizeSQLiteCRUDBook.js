@@ -36,26 +36,6 @@ const Book = sequelize.define('book', {
 // create the books table if it doesn't exist
 sequelize.sync();
 
-// define the Book model
-const Book = sequelize.define('book', {
-  id: {
-    type: Sequelize.INTEGER,
-    autoIncrement: true,
-    primaryKey: true
-  },
-  title: {
-    type: Sequelize.STRING,
-    allowNull: false
-  },
-  author: {
-    type: Sequelize.STRING,
-    allowNull: false
-  }
-});
-
-// create the books table if it doesn't exist
-sequelize.sync();
-
 // route to get all books
 app.get('/books', (req, res) => {
   Book.findAll().then(books => {
